@@ -22,7 +22,8 @@ subroutine mult(yo_t_,FMye_t_,ue_t_,uo_t_,ieo,fclinve_t_)
   complex(8), intent(out):: FMye_t(COL,SPIN,0:NTH,0:NZ1,0:NY1,0:NX1)
   complex(8), intent(in) :: fclinve_t(CLSPH,0:NTH,NZ,NY,NX,2)
 
-!$acc data pcopy(yo_t_,FMye_t_) pcopyin(ue_t_,uo_t_,fclinve_t_) async(0)
+!!acc data pcopy(yo_t_,FMye_t_) pcopyin(ue_t_,uo_t_,fclinve_t_) async(0)
+!$acc data pcopy(yo_t_,FMye_t_) pcopyin(ue_t_,uo_t_,fclinve_t_) 
 
   !====================================
   ! boundary exchange copy on yo_t

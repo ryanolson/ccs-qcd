@@ -81,7 +81,7 @@ subroutine bicgstab_hmc(tol,iiter,flopcount,stcount, ldcount, &
 
 !$acc data pcopyin(ue_t_,uo_t_,fclinve_t_,fclinvo_t_) &
 !$acc& pcopyin(be_t_) copyout(xe_t_) &
-!$acc& pcreate(xe_t_,rte_t_,pe_t_,te_t_,qe_t_,re_t_,myo_t_) async(0)
+!$acc& pcreate(xe_t_,rte_t_,pe_t_,te_t_,qe_t_,re_t_,myo_t_)
 
 
 !*******

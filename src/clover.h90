@@ -41,7 +41,8 @@
   allocate(ve_t(COL,COL,NTH,NZ,NY,NX))
   allocate(vo_t(COL,COL,NTH,NZ,NY,NX))
 
-!$acc data pcopy(ue_t_,uo_t_, ucle_t_,uclo_t_) pcreate(wce_t_,wco_t_,ve_t_,vo_t_) async(0)
+!!acc data pcopy(ue_t_,uo_t_, ucle_t_,uclo_t_) pcreate(wce_t_,wco_t_,ve_t_,vo_t_) async(0)
+!$acc data pcopy(ue_t_,uo_t_, ucle_t_,uclo_t_) pcreate(wce_t_,wco_t_,ve_t_,vo_t_) 
 
   zid8=-zi/8.0d0
 !***********************************************************************

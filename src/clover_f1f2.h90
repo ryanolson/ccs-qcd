@@ -33,7 +33,8 @@ subroutine clover_f1f2(kappa,csw,f1cle_t_,f2cle_t_,ucle_t_)
     zunit(ic,ic)=(1.0d0,0.0d0)
   enddo
 
-!$acc data pcopy(f1cle_t_,f2cle_t_) pcopyin(ucle_t_,zunit) async(0)
+!!acc data pcopy(f1cle_t_,f2cle_t_) pcopyin(ucle_t_,zunit) async(0)
+!$acc data pcopy(f1cle_t_,f2cle_t_) pcopyin(ucle_t_,zunit)
 
 !************************************************************************
 !

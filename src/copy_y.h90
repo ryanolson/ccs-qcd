@@ -21,7 +21,7 @@ subroutine copy_y(ye_t_,ieo)
   call comlib_barrier
 #endif
 
-!$acc data pcopy(ye_t_) async(0)
+!$acc data pcopy(ye_t_)
 
 !***** T - boundaray
 #ifdef _OPENACC

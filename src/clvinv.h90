@@ -60,7 +60,8 @@ subroutine clvinv(kappa,csw,fclinve_t_,fclinvo_t_,ucle_t_,uclo_t_,logdetfcl,idet
   allocate(AAe_t(CLSP/2,CLSP/2,NTH,NZ,NY,NX))
   allocate(d(NTH,NZ,NY,NX))
 
-!$acc data pcopy(fclinve_t_,fclinvo_t_,ucle_t_,uclo_t_) pcreate(f1cl_t_,f2cl_t_,f1clinv_t_,f2clinv_t_, AAe_t_,d) async(0)
+!!acc data pcopy(fclinve_t_,fclinvo_t_,ucle_t_,uclo_t_) pcreate(f1cl_t_,f2cl_t_,f1clinv_t_,f2clinv_t_, AAe_t_,d) async(0)
+!$acc data pcopy(fclinve_t_,fclinvo_t_,ucle_t_,uclo_t_) pcreate(f1cl_t_,f2cl_t_,f1clinv_t_,f2clinv_t_, AAe_t_,d)
 
 !****************************
 ! calc clover term matrix in chiral rep. (even part)

@@ -34,7 +34,8 @@ subroutine mult_mb_pre(kappa,ye_t_,yde_t_,ue_t_,uo_t_,ieo,fclinve_t_,fclinvo_t_,
 
   kappa2=kappa**2
 
-!$acc data pcopy(yde_t_) pcreate(Myo_t_) pcopyin(ye_t_,ue_t_,uo_t_,fclinve_t_,fclinvo_t_) async(0)
+!!acc data pcopy(yde_t_) pcreate(Myo_t_) pcopyin(ye_t_,ue_t_,uo_t_,fclinve_t_,fclinvo_t_) async(0)
+!$acc data pcopy(yde_t_) pcreate(Myo_t_) pcopyin(ye_t_,ue_t_,uo_t_,fclinve_t_,fclinvo_t_)
 
 !**********************************
 !  Myo = Foo^-1 Moe ye

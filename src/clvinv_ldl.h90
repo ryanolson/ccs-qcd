@@ -41,7 +41,8 @@ subroutine clvinv_ldl(bbe_t_,Ae_t_,AAe_t_,d,logdetAe,idet)
 !$OMP END DO
 !$OMP END PARALLEL
 
-!$acc data pcopy(AAe_t_,bbe_t_,d) pcopyin(Ae_t_,zunit) async(0)
+!!acc data pcopy(AAe_t_,bbe_t_,d) pcopyin(Ae_t_,zunit) async(0)
+!$acc data pcopy(AAe_t_,bbe_t_,d) pcopyin(Ae_t_,zunit) 
 
 !*****************
 !* set unit matrix for source b

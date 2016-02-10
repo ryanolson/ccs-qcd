@@ -109,7 +109,7 @@ program ccs_qcd_solver_bench
   allocate(ucle_t(COL,COL,NTH,NZ,NY,NX,NDIM*(NDIM-1)/2))
   allocate(uclo_t(COL,COL,NTH,NZ,NY,NX,NDIM*(NDIM-1)/2))
 !$acc enter data pcopyin(ue_t_,uo_t_)  pcreate(fclinve_t_,fclinvo_t_)
-!$acc data  pcreate(ucle_t_,uclo_t_) async(0)
+!$acc data  pcreate(ucle_t_,uclo_t_)
   call xclock(etime0,8)
   call maprof_time_start(SEC_CLOVER)
   call clover(ucle_t_,uclo_t_,ue_t_,uo_t_)
