@@ -9,10 +9,10 @@ REVISION = -D_REVISION_='"$(shell cat .svnrevision)"'
 FC      = ftn 
 CC      = cc
 
-FFLAGS  = 
-CFLAGS  = $(FFLAGS)
+FFLAGS  = -rm -h noomp
+CFLAGS  = -h noomp
 
-ACCFLAGS = -h acc_model=fast_addr -h noomp
+ACCFLAGS = -h acc_model=fast_addr 
 FFLAGS += $(ACCFLAGS)
 
 LD = ftn
